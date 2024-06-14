@@ -213,7 +213,7 @@ nav a:hover {
 }
 
 .help-container {
-  height: calc(100vh - 128px);
+  height: calc(200vh - 128px);
   width: 100%;
   background-color: rgb(235, 235, 235);
   padding: 8px;
