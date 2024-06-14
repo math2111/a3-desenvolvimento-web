@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ms-1-db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+
+  db-2:
+    image: postgres
+    ports:
+      - 5433:5432
+    environment:
+      POSTGRES_DB: ms-2-db
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+
+  rabbit:
+    image: "rabbitmq:3-management"
+    environment:
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
